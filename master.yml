@@ -5,15 +5,15 @@
   tasks:
     - name: Clone Git Repository
       git:
-        repo: 
-        dest: /home/ubuntu/kubernetes
+        repo: https://github.com/wahtej/k8s.manifest.git
+        dest: /home/ubuntu/k8s
         force: yes
       become: false
       remote_user: ubuntu
       
     - name: Set permissions for the cloned directory
       file:
-        path: /home/ubuntu/kubernetes
+        path: /home/ubuntu/k8s
         state: directory
         owner: ubuntu
         group: ubuntu
@@ -21,15 +21,15 @@
         
     - name: Set execute permission for deploy script
       file:
-        path: /home/ubuntu/kubernetes/main.sh
+        path: /home/ubuntu/k8s/main.sh
         state: file
         owner: ubuntu
         group: ubuntu
         mode: "0755"
         
     - name: Execute deploy script
-      command: /home/ubuntu/kubernetes/main.sh
+      command: /home/ubuntu/k8s/main.sh
       args:
-        chdir: /home/ubuntu/kubernetes
+        chdir: /home/ubuntu/k8s
       become: false
       remote_user: ubuntu
