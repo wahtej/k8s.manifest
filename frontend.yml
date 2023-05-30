@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: wahtej/frontnew1
+        image: wahtej/frontnew1:latest
         ports:
         - containerPort: 3000
 
