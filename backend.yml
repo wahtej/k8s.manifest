@@ -15,6 +15,7 @@ spec:
       containers:
       - name: backend
         image: wahtej/backend8:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 
