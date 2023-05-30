@@ -15,6 +15,7 @@ spec:
       containers:
       - name: frontend
         image: wahtej/frontnew2:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
 
