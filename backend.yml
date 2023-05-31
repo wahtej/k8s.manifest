@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: wahtej/backend9
+        image: wahtej/backend9:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
