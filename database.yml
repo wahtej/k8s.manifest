@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: wahtej/mysql
+        image: wahtej/mysql1
         ports:
         - containerPort: 3306
         env:
